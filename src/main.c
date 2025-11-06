@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
         elog("error maping file , path '%s'", argv[1]);
     }   
 
-    uint16_t index = get_glyph_index(&source, (uint32_t)'f');
+    uint16_t index = get_glyph_index(&source, (uint32_t)*((char*)argv[2]));
     head_table *head = try_load_head_table(&source);
     uint32_t glyph_offset, glyph_length;
 
